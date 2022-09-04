@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyke</title>
+  <link rel="stylesheet" href="/user.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class='p-2'>
+  
+  <nav class='flex gap-6 mb-8'>
+    <div class='usr-nav-section flex-grow font-bold text-xl'>
+      Hello, <%= username %>!
+    </div>
+
+    <div class='usr-nav-section gap-4 relative'>
+      <img src="/images/history.svg" alt="profile" class='h-8'>
+      <img src="/images/blankuser.svg" alt="profile" class='h-8' onclick='profileOptions()'>
+
+      <div id='profile-options' class='data-card hidden flex flex-col gap-2 absolute top-[5rem] text-center w-36 right-0'>
+        <span class='px-4 pt-2'>Edit Profile</span>
+        <a href='/logout' class='py-2 bg-purple-800 text-white px-4 py-2' style='border-radius: 0 0 4px 4px;'>Log Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <center class='mb-8'>
+    <%- include(`./partials/card${rank}.html`, {width: '20vw'}); %>
+  </center>
+
+  <div class='flex px-8 gap-8 w-full mb-8'>
+    <div class='data-card p-4 flex-grow'>
+      <span class='block text-2xl text-center font-bold mb-4'>Amount Recycled</span>
+      <div class='grid grid-cols-2 gap-y-2 text-xl place-items-center'>
+        <span class='font-bold'>Total</span>
+        <span class='font-bold'>This Month</span>
+
+        <span class='text-lg'><%= amt %> lbs</span>
+        <span class='text-lg'>1.3 lbs</span>
+
+        <span class='text-lg'>$<%= money_made %></span>
+        <span class='text-lg'>$0.68</span>
+      </div>
+    </div>
+    
+    <div class='data-card p-4 flex-grow'>
+      <span class='block text-2xl text-center font-bold mb-4'>Recycling Trends</span>
+    </div>
+
+  </div>
+
+  <div class='flex px-8 gap-8 w-full'>
+    
+    <div class='data-card p-4 px-8 flex-grow'>
+      <span class='block text-2xl text-center font-bold mb-4'>Recycling Tips</span>
+
+      <ul class='list-disc text-xl'>
+        <li class='mb-4'>You can recycle: aluminum and plastics types 1, 2, and 5</li>
+        <li class='mb-4'>Make sure to clean off food scraps before recycling a food container</li>
+        <li class='mb-4'>If you want to recycle plastic bags, you must go to a drop off point. Recycling trucks won't recycle them.</li>
+        <li class='mb-4'>Don't recycle anything smaller than a credit card, they won't be detected. This includes putting the cap back on water bottles.</li>
+      </ul>
+    </div>
+
+    
+  </div>
+
+  <script>
+    function profileOptions(){
+      let opts = document.getElementById('profile-options');
+      if (opts.classList.contains('hidden')) opts.classList.remove('hidden');
+      else opts.classList.add('hidden');
+    }
+  </script>
+  
+</body>
+</html>

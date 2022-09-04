@@ -1,0 +1,22 @@
+<div id='other'>
+      <h1 class=' text-center text-4xl underline underline-offset-1'>What is CYKE?</h1>
+      </br>
+    
+      <h3 class='text-lg text-right py-8 p-8'>The platform for improving your recycling habits while helping other people's lives in the process.</h3>   
+      </br>
+      
+      <h4 class = 'text-lg text-right py-8 p-8'>CYKE exists to close the gap that has always existed within recycling: not everyone has the means to participate even if they want to</h4>
+    
+      <h4 class = 'text-lg text-right py-16 p-8'>Many people worry about rent or food on their table before they can worry about helping to save the environment.</h4>
+      </br>
+    
+      <h3 class = 'text-lg text-right py-8 p-8'>You can use CYKE to build up your recycling progress, keep track of those gains, and get paid for it.</h3>
+      </br>
+    
+      <h3 class = 'text-lg text-right p-8'>You can then use your compensation to satisfy needs of underserved communities around you or any needs you may have yourself. </h3>
+    
+      </br>
+    
+      <h4 class = 'text-2xl text-center p-8'>So join us</h4>
+      <h3 class = 'text-lg text-center p-8'>And help us to bring recycling full circle!</h3>
+</div>

@@ -1,0 +1,18 @@
+<div class='card relative bg-white border-4 border-black flex flex-col justify-center items-center' style='width: <%= width %>; aspect-ratio: 1.625; border-radius: calc(<%= width %> / 40)'>
+  <!-- numbers in the corners -->
+  <span class='absolute top-0 right-[3%]' style='font-size: calc(<%= width %> / 10)'>2</span>
+  <span class='absolute bottom-0 left-[3%]' style='font-size: calc(<%= width %> / 10)'>2</span>
+
+  <!-- stars in the corners -->
+  <div class='star level-2 absolute top-[3%] left-[3%]' style='width: calc(<%= width %> / 8); height: calc(<%= width %> / 8)'></div>
+  <div class='star level-2 absolute top-[3%]' style='width: calc(<%= width %> / 8); left: calc(3% + <%= width %> / 8 ); height: calc(<%= width %> / 8)'></div>
+  
+  <div class='star level-2 absolute bottom-[3%] right-[3%]' style='width: calc(<%= width %> / 8); height: calc(<%= width %> / 8)'></div>
+  <div class='star level-2 absolute bottom-[3%]' style='width: calc(<%= width %> / 8); right: calc(3% + <%= width %> / 8 ); height: calc(<%= width %> / 8)'></div>
+
+  <!-- middle section -->
+  <img src="/images/blankuser.svg" alt="Profile Picture" style='width: calc(<%= width %> / 4)'>
+  <span style='font-size: calc(<%= width %> / 12)'>Experienced</span>
+
+  <div class='w-5/12 border-black bg-green-600' style='aspect-ratio: 11; border-width: calc(<%= width %> / 110); border-radius: calc(<%= width %> / 70)'></div>
+</div>

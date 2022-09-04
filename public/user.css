@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Monoton&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 1rem;
+  background: linear-gradient(#a3d9cf 0%, #f4f0dc 80%, white);
+  height: 100vh;
+}
+
+.logo {
+  font-family: Monoton;
+}
+
+.usr-nav-section {
+  background: rgba(210, 210, 210, 0.49);
+  border: 1px solid white;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.41);
+  border-radius: 4px;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.data-card {
+  background: rgba(210, 210, 210, 0.49);
+  border: 1px solid white;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.41);
+  border-radius: 4px;
+}
+
+
+.star.level-1 {
+  background:#008425;
+}
+.star.level-2 {
+  background:#626262;
+}
+.star.level-3 {
+  background:#D0BB00;
+}
+.star.level-4 {
+  background:#D00000;
+}
+.star {
+ clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}

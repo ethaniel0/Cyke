@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Monoton&display=swap');
+
+
+* {
+  font-family: "Kumbh Sans";
+}
+
+.logo {
+  font-family: Monoton;
+}
+
+#login-modal {
+  top: calc(100% + 0.5rem);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  right: 0;
+  padding: 1rem;
+  border: 4px double black;
+  width: 25rem;
+  opacity: 0;
+}
+
+#login-modal input {
+  border: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+  outline: none;
+}
+
+#login-modal.opened {
+  opacity: 1;
+  animation: 0.5s ease-in-out forwards loginExpand;
+}
+#login-modal.opened > div {
+  opacity: 0;
+  animation: 0.3s ease-in-out 0.5s forwards fadeIn;
+}
+
+#login-modal.closed {
+  animation: 0.5s ease-in-out reverse forwards loginExpand;
+}
+/* 
+#login-modal.closed > div {
+  animation: 0.3s ease-in-out reverse forwards fadeIn;
+} */
+
+
+@keyframes loginExpand {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 25rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#intro {
+  background: linear-gradient(#a3d9cf 0%, #f4f0dc 80%, white);
+}
+
+#trash {
+  background: linear-gradient(white 80%, rgb(230, 240, 255)); 
+}
+
+#whoweare {
+  background: linear-gradient(rgb(230, 240, 255) 80%, #F9EBFF); 
+}
+
+#how {
+  background: linear-gradient(#F9EBFF 80%, #FFF2CF); 
+}
+
+#🥺 {
+  background: #FFF2CF;
+}
+
+
+#top-login-btn, #top-login-btn button {
+  transition-duration: 200ms;
+}
+
+#top-login-btn:hover, #top-login-btn:hover button {
+  border-color: #A23D99;
+  backdrop-filter: blur(2px);
+}
+
+.fp-watermark {
+  display: none;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyke</title>
+  <link rel="stylesheet" href="/fullpage.min.css" />
+  <link rel="stylesheet" href="/landing.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="fullpage.min.js"></script>
+</head>
+<body>
+
+  <div id='fullpage'>
+    <div id='intro' class='section w-screen h-screen relative'>
+      <img id='top-waves' src="images/lines.svg" alt="" class='absolute top-0 left-0 w-full h-full'>
+      
+      <div class='flex justify-center items-center flex-col h-full w-full text-center absolute'>
+        <span class='logo' style='font-size: max(8vw, 8rem);'>Cyke</span>
+        <span style='font-size: max(2.5vw, 2.5rem);'>Full Circle Recycling</span>
+        </br>
+      </div>
+
+      <div class='absolute top-4 right-4'>
+        <div id='top-login-btn' onclick='showLogin()' class='border-black' style='border-width: 1.5px; padding: 0.05rem; padding-bottom: 0.08rem'>
+          <button class='border-4 border-double border-black py-2 px-4 text-2xl'>Log In</button>
+      </div>
+
+      <div id='login-modal' class='absolute'>
+        <div class='flex flex-col'>
+            <span class='text-2xl font-bold'>Log In</span>
+            <br>
+            <span class='text-xl'>Email</span>
+            <input id='email-input' type="email" placeholder='email'>
+            <br>
+            <span class='text-xl'>Password</span>
+            <input id='pass-input' type="password" placeholder='password'>
+            <br>
+            <div id='confirm-password' class='hidden flex flex-col'>
+              <span class='text-xl'>Confirm Password</span>
+              <input id='pass2-input' type="password" placeholder='password again'>
+              <br>
+            </div>
+
+            <button onclick='loginBtn()' class='w-1/2 p-2 bg-purple-600 text-white font-bold self-center'>Log In</button>
+            <br>
+
+            <span id='signup-bar'>Not on Cyke yet? <span class='text-purple-600 font-bold cursor-pointer' onclick='switch_signup()'>Sign Up</span></span>
+          </div>
+        </div>
+      </div>
+       
+    </div>
+    
+    <div id='trash' class='section grid place-items-center'>
+      
+      <div id='bigblob' class='grid place-items-center absolute right-[20vw]' style='z-index: 1'>
+        
+        <div class='relative w-96 mr-50'>
+          <img src="images/bigblob.svg" alt="" class='absolute'>
+        </div>
+      </div>
+
+      <div id='diag' class='grid place-items-center absolute top-[6vw] right-[14vw]' style='z-index: 1'>
+        
+        <div class='relative w-96 mr-50'>
+          <img src="images/diag.svg" alt="" class='absolute'>
+        </div>
+      </div>
+      
+      <div class='flex w-10/12 absolute' style='z-index: 5'>
+        
+        <div class='relative w-96 mr-48'>
+          <img src="images/trashbag.svg" alt="" class='absolute'>
+        </div>
+
+        <div class='flex flex-col w-8/12'>
+            <span class='font-bold text-6xl text-center p-8'>Reduce. Reuse. Recycle.
+    But Do You?</span>
+            <span class='text-3xl text-left'>66% of Americans won’t recycle if it isn’t easy. We want to change that, to change our planet.</span>
+        </div>
+
+
+      </div>
+      
+    </div>
+    
+    <div id='whoweare' class='section grid place-items-center'>
+      <div class='flex w-10/12 items-center'>
+
+        <div class='text-center'>
+          <img src="images/stonks.jpg" alt="stonks">
+          <span class='font-bold text-2xl'>(for the environment)</span>
+        </div>
+
+        <div class='flex flex-col w-8/12 ml-16'>
+            <span class='font-bold text-6xl'>What is Cyke?</span>
+            <br>
+            <br>
+            <span class='text-3xl'>Cyke lets you improve your recycling habits while helping other people's lives in the process.</span>
+            <br>
+              <span class='text-3xl'>We give you tips on how to recycle better and score you based on your how well / much you've been recycling.</span>
+          <br>
+              <span class='text-3xl'>You also help donate to charity!</span>
+        </div>
+
+    
+      </div>
+    </div>
+
+    <div id='how' class='section grid place-items-center'>
+      <div class='flex w-11/12 items-center'>
+
+        <div class='text-center'>
+          <img src="images/triangle.png" alt="How we work">
+        </div>
+
+        <div class='flex flex-col w-11/12 ml-16' style='min-width: 30rem;'>
+            <span class='font-bold text-6xl mb-12'>How does Cyke work?</span>
+            <span class='text-3xl mb-8'>Every part of Cyke is essential. You do the most important part: recycle.</span>
+          
+          <span class='text-2xl mb-8'>Recycling plants record when and what you recycle and report that data to us. For giving them a platform, they also give us some percent of their revenue.</span>
+          
+          <span class='text-2xl'>We tell you how well you're recycling and how you could be better at it. And for every amount of material you recycle, <b>we give you money</b>. You can also choose a to donate some of your earnings to <b>help someone in need.</b></span>
+        </div>
+        
+      </div>
+    </div>
+
+    <div id='🥺' class='section grid place-items-center'>
+      <div class='flex flex-col items-center'>
+
+        <span class='font-bold text-6xl mb-12'>So what are you waiting for?</span>
+
+        <button class='px-6 py-3 bg-[#cfdcff] border-blue-800 border-2 text-2xl mb-12'>Sign Up Today!</button>
+
+        <span class='text-xl'>Go green to get some green 😄</span>
+        
+      </div>
+    </div>
+    
+  </div>
+
+  
+  <script>
+    new fullpage('#fullpage', {
+      // loopBottom: true;
+    });
+
+    var loginOpened = false;
+    var login = true;
+
+    function showLogin(){
+      if (loginOpened){
+        document.getElementById('login-modal').classList.remove('opened');
+        setTimeout(() => document.getElementById('login-modal').classList.add('closed'), 30);
+        loginOpened = false;
+      }
+      else {
+        document.getElementById('login-modal').classList.remove('closed');
+        setTimeout(() => document.getElementById('login-modal').classList.add('opened'), 30);
+        loginOpened = true;
+      }
+    }
+
+    function switch_signup(){
+      let signup = document.getElementById('signup-bar');
+
+      if (login){
+        signup.innerHTML = `On Cyke? <span class='text-purple-600 font-bold cursor-pointer' onclick='switch_signup()'>Log In</span>`;
+        document.getElementById("confirm-password").classList.remove('hidden');
+        login = false;
+      }
+      else {
+        signup.innerHTML = `Not on Cyke yet? <span class='text-purple-600 font-bold cursor-pointer' onclick='switch_signup()'>Sign Up</span>`;
+        document.getElementById("confirm-password").classList.add('hidden');
+        login = true;
+      }
+      
+      
+    }
+
+    function loginBtn(){
+      let email = document.getElementById('email-input').value;
+      let pass = document.getElementById('pass-input').value;
+      let pass2 = document.getElementById('pass2-input').value;
+      fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email,
+          pass,
+          pass2,
+          type: login
+        })
+      }).then(resp => resp.json()).then(json => {
+        if (json.error){
+          console.log(json.error);
+        }
+        else {
+          console.log(json.success);
+          location.href = json.success;
+        }
+      })
+    }
+  </script>
+</body>
+</html>
